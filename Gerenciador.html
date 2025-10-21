@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Notas</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input, textarea, select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+#notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note {
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baixa { background-color: #4CAF50; }
+.media { background-color: #FFC107; color: #000; }
+.alta { background-color: #F44336; }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Notas do Natan</h1>
+    </header>
+
+    <main>
+        <form action="#">
+            <input type="text" id="input" placeholder="Título da nota">
+            <textarea id="descricao" placeholder="Descrição da nota"></textarea>
+            <select id="prioridade">
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+            <button type="submit" id="button">Adicionar nota</button>
+        </form>
+
+        <div id="notes">
+        </div>
+    </main>
+    <footer>&copy; Feito por Natan Rcs</footer>
+<script src="natan.js"></script>
+</body>
+</html>
